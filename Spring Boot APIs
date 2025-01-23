@@ -1,0 +1,46 @@
+package com.main;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+
+@RestController
+@RequestMapping("/w3School")
+public class MyController_SpringBoot {
+	
+	@GetMapping("Java")
+	public String First() {
+		return "Java is OOPs language";
+	}
+	
+	@PostMapping("/html")
+	public String Second() {
+		
+		return "HTML is Structure Language.";
+		
+	}
+	
+	
+	@PutMapping("/CSS")
+	public String Third() {
+		
+		return "CSS is use to style the html structure";
+	
+	}
+	
+	@DeleteMapping("/JavaScript")
+	public String Fourth() {
+		
+		return "Java Script is a perform Action.";
+		
+	}
+
+}
+
