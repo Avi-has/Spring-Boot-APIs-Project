@@ -1,0 +1,98 @@
+package com.main;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/AdvanceJava")
+public class MyController_Spring {
+	
+	
+	@RequestMapping(value = "/SpringBoot", method = RequestMethod.GET)
+	public String springBootAnnotation() {
+		
+		System.out.println("Spring Boot Annotation");
+		return "@EnableAutoConfiguration ,@SpringBootApplication ,@RequestMapping ,@GetMapping ,@PostMapping ,@PutMapping ,@DeleteMapping ,@RestController ,@Service ...";
+		
+	}
+	
+	
+	
+	//Spring Annotation
+	
+	@RequestMapping(value = "/Spring", method = RequestMethod.GET)
+	public String springAnnotation() {
+		
+		System.out.println("Spring Annotation");
+		return "@Component,@ComponentScan,@Autowired,@Scope,@Value @Configuration,@Bean";
+		
+	}
+	
+	
+	
+	//Hibernate Annotation
+	
+	@RequestMapping(value = "/HibenateAnno", method = RequestMethod.POST)
+	public String hibernateAnnotation() {
+		
+		System.out.println("Hibenate Annotation");
+		return "@Entity, @ID, @GeneratedValue(strategy = GenerationType.IDENTITY), @Column, @Table";
+		
+	}
+	
+	//Hibernate   Components
+	
+	@RequestMapping(value = "/HibernateCompo", method = RequestMethod.PUT)
+	public String hibernateComponent() {
+		
+		System.out.println("Hibenate Component");
+		return "Configuration(c) , SessionFactory(i) ,Session(i) ,Transaction(i)";
+		
+	}
+	
+	
+	//JDBC Component
+	
+	@RequestMapping(value = "/JDBC", method = RequestMethod.HEAD)
+	public String jdbcComponent() {
+		
+		System.out.println("JDBC Component");
+		return "Connection(i) ,DriverManager(c) ,Statement(i) ,PreparedStatement(i) ,ResultSet(i)";
+		
+	}
+	
+	
+	//JDBC Jar
+
+	@RequestMapping(value = "/jdbcJar", method = RequestMethod.DELETE)
+	 public String jdbcJar() {
+		
+		System.out.println("Java Database Connectivity Jar");
+		return "mysql-connector-java-8.0.30";
+		 
+	 }
+	 
+	 
+	 //tomcat Server
+	
+	@RequestMapping(value = "/Server", method = RequestMethod.TRACE)
+	 public String server() {
+		
+		System.out.println("Apache Tomcat Server");
+		return "apache-tomcat-10.1.33";
+		 
+	 }
+	 
+	 
+	 //Class called As
+	
+	@RequestMapping(value = "/Class", method = RequestMethod.OPTIONS)
+	 public String classCalled() {
+		
+		System.out.println("Class Name");
+		return "pojo class , persistance class , bean class, instance class";
+		 
+	 }
+	  
+}
